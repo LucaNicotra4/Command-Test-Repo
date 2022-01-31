@@ -15,7 +15,9 @@ int main(){
 	cin >> name;
 	cout << "You entered: " << name << endl;
 
-	Weapon rifle("M4A1", true, true);
+	Weapon rifle("M4A1", false);
+	cout << "Wait, melee? " << rifle.getMelee() << endl;
+
 
 }
 
