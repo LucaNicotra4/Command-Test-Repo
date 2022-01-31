@@ -1,14 +1,22 @@
 #include <iostream>
-
-
+#include <string>
+#include "weapon.cpp"
 using namespace std;
+//creating COD game-ish
+
+//foward declarations:
+class Weapon;
 
 int main(){
-	cout << "Hello World" << endl;
-	int x;
-	cout << "Enter a number: ";
-	cin >> x;
-	cout << "You entered: " << x << endl;
+	string name;
+
+	cout << "Welcome to COD" << endl;
+	cout << "Enter name: ";
+	cin >> name;
+	cout << "You entered: " << name << endl;
+
+	Weapon rifle("M4A1", true, true);
+
 }
 
 int add(int a, int b){
