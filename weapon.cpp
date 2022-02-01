@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class Weapon{
+class Weapon{	
 public:
 	string name;
 	bool melee;
