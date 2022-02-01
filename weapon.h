@@ -8,9 +8,7 @@ public:
 	bool melee;
 
 
-	Weapon(string name, bool melee){
-		this->name = name;
-		this->melee = melee;
+	Weapon(string n, bool m) : name(n), melee(m){
 		cout << "Weapon created" << endl;
 		this->printInfo();
 	}
@@ -33,7 +31,5 @@ public:
 	void setMelee(bool melee){
 		this->melee = melee;
 	}
-
-private:
 
 };

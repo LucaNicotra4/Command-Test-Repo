@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include "weapon.cpp"
+#include "weapon.h"
+#include "primary.h"
 using namespace std;
 //creating COD game-ish
 
@@ -16,23 +17,9 @@ int main(){
 	cout << "You entered: " << name << endl;
 
 	Weapon rifle("M4A1", false);
-	cout << "Wait, melee? " << rifle.getMelee() << endl;
+	cout << "creating primary ... " << endl;
+	Primary scar("Scar", 30, true);
 
-
+	return 0;
 }
 
-int add(int a, int b){
-	return a + b;
-}
-
-int subtract(int a, int b){
-	return a - b;
-}
-
-int multiply(int a, int b){
-	return a * b;
-}
-
-double divide (int a, int b){
-	return a / b;
-}
