@@ -1,24 +1,23 @@
 #include <iostream>
 #include <string>
+#include <cstdio>
 using namespace std;
+
 
 class Primary : public Weapon {
 public:
-	int magSize;
-	bool sight;
-
+	
 	//Primary Weapon constructor
 	// : Weapon() is calling super constructor
-	Primary(string name, int a, bool b) : Weapon(name, false), magSize(a), sight(b) {
-		cout << "Primary created with : " << endl;
+	Primary(string name, int a, bool b, bool c) : Weapon(name, a, b, c) {
+		//cout << ANSI_RED << "Primary created" << ANSI_RESET << endl;
+		this->printInfo();
+	}
+
+	void printInfo(){
+		cout << "Name: " << this->name << endl;
 		cout << "MagSize: " << magSize << endl;
-		cout << "Sight: ";
-		if(sight){
-			cout << "yes";
-		};
-		if(!sight){
-			cout << "no";
-		};
-		cout << endl;
+		if(automatic) cout << "Automatic: yes" << endl;
+		if(!automatic) cout << "Automatic: no" << endl;
 	}
 };

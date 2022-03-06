@@ -5,17 +5,12 @@ using namespace std;
 class Weapon{	
 public:
 	string name;
-	bool melee;
+	int magSize;
+	bool automatic;
+	bool sight;
 
-
-	Weapon(string n, bool m) : name(n), melee(m){
+	Weapon(string n, int m, bool a, bool s) : name(n), magSize(m), automatic(a), sight(s){
 		cout << "Weapon created" << endl;
-		this->printInfo();
-	}
-
-	void printInfo(){
-		cout << "Name: " << this->name << endl;
-		cout << "Melee: " << this->melee << endl;
 	}
 
 	//getters and setters:
@@ -25,11 +20,4 @@ public:
 	void setName(string name){
 		this->name = name;
 	}
-	bool getMelee(){
-		return this->melee;
-	}
-	void setMelee(bool melee){
-		this->melee = melee;
-	}
-
 };
